@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %} Contact {% endblock title %}
+{% block body %} 
+
+<div class="container-fluid ">
+  <img
+    src="https://i0.wp.com/geardiary.com/wp-content/uploads/2023/02/Lenovo-Rollable-Screen-Proof-of-Concept-Devices-001.jpg"
+    class="w-100  mx-0 "
+    align-items="center"
+    height="350"
+    alt="..."
+  />  
+  <form method="post" action="/contact">  
+    {% csrf_token %}
+    <div class="container mb-3 py-4 br-4">
+      <h1 class="text-center">Contact Us</h1>
+      <div>  
+        <div> 
+          Name<input class="form-control" type="text" name="name" placeholder="Enter your name " aria-label="default input example">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="Enter your email">
+        </div>
+
+        <div> 
+          Phone No <input class="form-control mb-3" type="text" name="phone" placeholder="Enter your Phone number " aria-label="default input example">
+        </div>   
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Address</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" name="desc" rows="3"></textarea>
+        </div>    
+      </div>
+      <button type="submit" class="btn btn-primary mb-3">Submit</button>
+    </div>
+  </form>
+</div>
+{% endblock body %}
