@@ -1,4 +1,9 @@
-from django.shortcuts import render, HttpResponse
+# Admin panel import files
+# from django.contrib.auth.models import User
+# from django.contrib.auth import authenticate,login
+
+from django.shortcuts import render
+ 
 from datetime import datetime
 from home.models import Contact
 from django.contrib import messages
@@ -28,4 +33,6 @@ def contact(request):
     
   return render(request, 'contact.html')
 
+
+# Admin pannel Customize
 
